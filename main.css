@@ -54,3 +54,66 @@ body {
     left: calc(50% - (1800px / 2));
     /*background-color: red;*/
 }
+
+.nav-games {
+    width: 70px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: clamp(12px,calc(.7rem + .25vw),20px);
+    text-align: center;
+    border-radius: 10px;
+    transition-property: border;
+    transition-duration: .09s;
+    transition-timing-function: ease-in;
+    position: absolute;
+    top: 20px;
+    cursor: grab;
+}
+
+.nav-games:hover {
+    border: 2px solid rgba(0,0,0,.2);
+    box-shadow: 0 0 10px black;
+}
+
+.nav-games > p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: white;
+    font-family: Gotham Narrow SSm A,Gotham Narrow SSm B,Rubik,Lato,Lucida Grande,Lucida Sans Unicode,Tahoma,Sans-Serif;
+}
+
+.nav-games:hover > p {
+    text-shadow: 0 0 10px white;
+}
+
+.h-navbar > .submenu {
+    width: 50px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: clamp(12px,calc(.7rem + .25vw),20px);
+    text-align: center;
+    border-radius: 10px;
+    transition-property: border;
+    transition-duration: .09s;
+    transition-timing-function: ease-in;
+    position: absolute;
+    top: 20px;
+    cursor: grab;
+    left: 100px;
+}
+
+.h-navbar > .submenu > p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: white;
+    font-family: Gotham Narrow SSm A,Gotham Narrow SSm B,Rubik,Lato,Lucida Grande,Lucida Sans Unicode,Tahoma,Sans-Serif;
+}
+
+.h-navbar > .submenu:hover > p {
+    text-shadow: 0 0 10px white;
+}
+
+.h-navbar > .submenu:hover {
+    border: 2px solid rgba(0,0,0,.2);
+    box-shadow: 0 0 10px black;
+}
