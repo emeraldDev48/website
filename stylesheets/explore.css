@@ -1,0 +1,293 @@
+@font-face {
+    font-family: "Arciform Sans";
+    src: url("../fonts/Arciform.woff");
+}
+
+html::-webkit-scrollbar {
+    width: 16px;
+    height: 16px
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #434343;
+    border-radius: 16px;
+    box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, .25), inset -2px -2px 2px rgba(0, 0, 0, .25)
+}
+
+html::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, #434343, #434343 1px, #111 0, #111)
+}
+
+body {
+    background-color: #2a2a2a;
+}
+
+.logo {
+    color: rgba(10, 237, 119, 0.96);
+    font-family: "Arciform Sans", sans-serif;
+    position: absolute;
+    bottom: 0;
+}
+
+.logo > .p {
+    text-shadow: 0 0 3px black;
+    transition-timing-function: ease-in;
+    transition-property: text-shadow;
+    transition-duration: .1s;
+}
+
+.logo:hover::after {
+    opacity: 1;
+}
+
+.logo:hover > p {
+    text-shadow: 0 0 3px white;
+}
+
+.logo::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    opacity: 0;
+    transition-timing-function: ease-in;
+    transition-property: opacity;
+    transition-duration: .1s;
+
+}
+
+.header {
+    position: absolute;
+    /*left: calc(50% - (1700px / 2));*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(90deg, #d05c28, #99052f, #5a9196);
+    box-shadow: 0px 0px 10px black;
+    z-index: 1;
+}
+
+.explore {
+    color: rgb(255, 255, 255);
+    font-family: "Arciform Sans", sans-serif;
+    position: absolute;
+    left: 123px;
+    bottom: 0;
+}
+
+.explore > p {
+    text-shadow: 0 0 3px black;
+    transition-timing-function: ease-in;
+    transition-property: text-shadow;
+    transition-duration: .1s;
+}
+
+.explore:hover > p {
+    text-shadow: 0 0 3px white;
+}
+
+.explore::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    opacity: 0;
+    transition-timing-function: ease-in;
+    transition-property: opacity;
+    transition-duration: .1s;
+
+}
+
+
+.explore:hover::after {
+    opacity: 1;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    /*background-color: red;*/
+}
+
+.righticons {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 35px;
+    z-index: 1;
+    /*background-color: red;*/
+}
+
+
+.account {
+    width: 33px;
+    height: 33px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    transition-duration: .1s;
+    transition-property: opacity;
+    transition-timing-function: ease-in;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-image: url("../images/icons/usr.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.account:hover {
+    opacity: .6;
+}
+
+.search {
+    width: 33px;
+    height: 33px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    transition-duration: .1s;
+    transition-property: opacity;
+    transition-timing-function: ease-in;
+    position: absolute;
+    right: 55px;
+    top: 10px;
+    background-image: url("../images/icons/search.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.search:hover {
+    opacity: .6;
+}
+
+
+.loginb {
+    display: block;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 100px;
+    height: 50px;
+    background-color: azure;
+    opacity: 0;
+}
+
+.loginb::after {
+    content: "";
+    margin-top: -30px;
+    padding-top: 0px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    border-width: 0 0 30px 30px;
+    border-style: solid;
+    border-color: azure transparent;
+    display: block;
+    width: 0;
+    opacity: 0;
+}
+
+.gamenav > #g-title {
+    width: 100%;
+    height: 100px;
+    /*background-color: red;*/
+    position: absolute;
+    top: 200px;
+    font-size: 36px;
+    color: white;
+    font-family: "Arciform Sans";
+    overflow: hidden;
+}
+
+@keyframes slidein {
+    from {
+        right: -300px;
+    }
+    to {
+        right: calc(50% - 150px);
+    }
+}
+
+.gamenav > #g-title > p {
+    position: absolute;
+    right: calc(50% - 150px);
+    animation-name: slidein;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    width: 300px;
+}
+
+.gamenav > .games > .g-search {
+
+    position: absolute;
+    top: 300px;
+    width: 1000px;
+    background-color: #171717;
+    padding: 30px 0 30px 0;
+    left: calc(50% - 500px);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+
+
+
+
+@media only screen and (min-width: 799px) and (max-width: 1335px) {
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo > p {
+        margin: 16px 16px 16px 16px;
+    }
+
+    .explore {
+        font-size: 18px;
+        left: 107px;
+    }
+
+    .explore > p {
+        margin: 16px 16px 16px 16px;
+    }
+
+}
+
+
+@media only screen and (min-width: 1360px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .logo > p {
+        margin: 20px 20px 20px 20px;
+    }
+
+    .explore {
+        font-size: 20px;
+    }
+
+    .explore > p {
+        margin: 20px 20px 20px 20px;
+
+    }
+
+
+}
